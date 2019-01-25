@@ -27,6 +27,10 @@ puts "#{Post.count}"
 Post.find_or_create_by!(title: "One and only title", body: "One and only body")
 puts "#{Post.count}"
 
+puts "#{Comment.count}"
+Comment.find_or_create_by!(body: "One and Only Comment")
+puts "#{Comment.count}"
+
 puts "Seed finished"
 puts "#{Post.count} posts created"
 puts "#{Comment.count} comments created"
