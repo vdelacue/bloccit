@@ -24,11 +24,11 @@ posts = Post.all
 end
 
 puts "#{Post.count}"
-Post.find_or_create_by!(title: "One and only title", body: "One and only body")
+p = Post.find_or_create_by!(title: "One and only title", body: "One and only body")
 puts "#{Post.count}"
 
 puts "#{Comment.count}"
-Comment.find_or_create_by!(body: "One and Only Comment")
+Comment.find_or_create_by!(post: p, body: "One and Only Comment")
 puts "#{Comment.count}"
 
 puts "Seed finished"
